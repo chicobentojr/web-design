@@ -1,2 +1,10 @@
-# web-design
-Atividades da Disciplina de Web Design
+# Web Design
+
+**Curso:** Tecnologia em Análise e Desenvolvimento de Sistemas (TADS)
+
+**Período:** 2016.1
+
+**Professor:** [Weskley Bezerra](https://github.com/weskleymb)
+
+**Instituição:** IFRN - Campus Natal Central
+
