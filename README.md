@@ -10,3 +10,4 @@
 
 ## Aulas
 - Aula 05 | [Atividade](/atividades/aula-05)
+- Aula 06 | [Atividade](/atividades/aula-06)
