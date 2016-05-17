@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Pesquisa Eleitoral</title>
+</head>
+<body>
+  <h1>Pesquisa Eleitoral</h1>
+  <h3>Eleições do líder da sala de aula</h3>
+  <form method="post" action="votar.html">
+    <label>Informe seu nome:</label><br />
+    <input type="text" size="50" />
+    <br />
+    <br />
+    <label>Selecione a categoria:</label><br />
+    <input type="radio" name="categoria" value="lider" />Líder</br>
+    <input type="radio" name="categoria" value="vice-lider" />Vice-Líder</br>
+    <input type="radio" name="categoria" value="secretario" />Secretário</br>
+    <input type="radio" name="categoria" value="humorista" />Humorista</br>
+    <input type="radio" name="categoria" value="estiloso" />Estiloso</br>
+    <input type="radio" name="categoria" value="timido" />Tímido</br>
+    <br />
+    <br />
+    <label>Selecione o candidato:</label><br />
+    <select name="candidadato">
+      <option value="jose">José</option>
+      <option value="maria">Maria</option>
+      <option value="joao">João</option>
+      <option value="pedro">Pedro</option>
+    </select>
+    <br />
+    <br />
+    <label>Quais cursos você o quer como representante:</label><br />
+    <input type="checkbox" name="curso" value="tads" />Tecnologia em Análise e Desenvolvimento de Sistemas</br>
+    <input type="checkbox" name="curso" value="rede" />Redes de Computadores</br>
+    <input type="checkbox" name="curso" value="gestao" />Gestão Pública</br>
+    <input type="checkbox" name="curso" value="comercio" />Comércio Exterior</br>
+
+    <br />
+    <br />
+    <label>Forneça sua senha para confirmação do envio:</label><br />
+    <input type="password" size="50" placeholder="Os valores serão escondidos para sua segurança" />
+    <br />
+    <br />
+    <label>Insira abaixo a inteção do seu voto:</label><br />
+    <textarea width="500" cols="50" rows="5" name="intencao"></textarea>
+
+    <br />
+    <br />
+    <input type="reset" value="Cancelar" />
+    <input type="submit" value="Votar" />
+
+  </form>
+</body>
+</html>
