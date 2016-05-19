@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Trabalhe Conosco</title>
+</head>
+<body>
+  <h1>Trabalhe Conosco</h1>
+  <h3>Nos envie seus dados para análise de contratação</h3>
+  <form method="post" action="enviar.html">
+    <label>Nome:</label><br />
+    <input type="text" name="nome" size="50" autocomplete="off" autofocus required/>
+    <br />
+    <br />
+    <label>Idade:</label><br />
+    <input type="number" name="idade" max="100" min="16" size="50" required/>
+    <br />
+    <br />
+    <label>Telefone:</label><br />
+    <input type="tel" name="telefone" autocomplete="off" required/>
+    <br />
+    <br />
+    <label>E-mail:</label><br />
+    <input type="email" name="email" autocomplete="off" required/>
+    <br />
+    <br />
+    <label>Área(s) de preferência:</label><br />
+    <input type="radio" name="area" value="dev" required />Desenvolvimento</br>
+    <input type="radio" name="area" value="design" required/>Design e Interfaces Gráficas</br>
+    <input type="radio" name="area" value="gerencia" required/>Gerenciamento de Projetos</br>
+    <br />
+    <br />
+    <label>Conhecimento(s):</label><br />
+    <input type="checkbox" name="conhecimento" value="c#"/>C#</br>
+    <input type="checkbox" name="conhecimento" value="java"/>Java</br>
+    <input type="checkbox" name="conhecimento" value="html"/>HTML5 e CSS3</br>
+    <input type="checkbox" name="conhecimento" value="angular"/>Angular</br>
+    <input type="checkbox" name="conhecimento" value="jquery"/>jQuery</br>
+    <br />
+    <br />
+    <label>Cor favorita:</label><br />
+    <input type="color" name="cor" required/>
+    <br />
+    <br />
+    <label>Aniversário:</label><br />
+    <input type="date" name="aniversario" required/>
+    <br />
+    <br />
+    <label>De 0 a 10, o quão você se considera autodidata:</label><br />
+    <input type="range" name="autodidata" min="0" max="10" required/>
+    <br />
+    <br />
+    <label>Mês de preferência para contratação:</label><br />
+    <input type="month" name="mes"/>
+    <br />
+    <br />
+    <label>Link para site pessoal:</label><br />
+    <input type="url" name="url"/>
+    <br />
+    <br />
+    <label>Intenção para contrato:</label><br />
+    <textarea width="500" cols="50" rows="5" name="intencao" required></textarea>
+    <br />
+    <br />
+    <input type="reset" value="Cancelar" />
+    <input type="submit" value="Enviar" />
+
+  </form>
+</body>
+</html>
