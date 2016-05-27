@@ -1,0 +1,47 @@
+:root {
+  --primary-color:#3D5AFE;
+  --secondary-color: #1A237E;
+}
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  padding: 5px;
+}
+a:hover {
+  color: var(--secondary-color);
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  font-weight: normal;
+  font-size: 1.2em;
+}
+header {
+  text-align: center;
+  background-color: var(--primary-color);
+  font-size: 3em;
+  font-weight: lighter;
+  color: white;
+  padding: 20px;
+}
+nav {
+  text-align: center;
+  background-color: var(--primary-color);
+  padding: .001em;
+}
+nav ul li {
+  list-style-type: none;
+  display: inline;
+  color: white !important;
+}
+main {
+  width: 968px;
+  margin: 0 auto;
+}
+section ul li {
+  margin: 10px 0 0 10px;
+  list-style-type: none;
+}
+footer {
+  text-align: center;
+}
