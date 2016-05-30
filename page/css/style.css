@@ -1,16 +1,9 @@
-:root {
+/*:root {
   --primary-color:#3D5AFE;
   --secondary-color: #1A237E;
   --bg-color: #536DFE;
-}
-a {
-  text-decoration: none;
-  color: var(--primary-color);
-  padding: 5px;
-}
-a:hover {
-  color: var(--secondary-color);
-}
+}*/
+
 body {
   font-family: 'Open Sans', sans-serif;
   margin: 0;
@@ -19,7 +12,7 @@ body {
 }
 header {
   text-align: center;
-  background-color: var(--primary-color);
+  background-color: #3D5AFE;
   font-size: 3em;
   font-weight: lighter;
   color: white;
@@ -27,7 +20,7 @@ header {
 }
 nav {
   text-align: center;
-  background-color: var(--primary-color);
+  background-color: #3D5AFE;
   padding: .001em;
 }
 nav li {
@@ -36,29 +29,66 @@ nav li {
 }
 nav a {
   padding: 5px 30px;
-  background-color: var(--bg-color);
+  background-color: #536DFE;
   color: white;
 }
 nav a:hover {
-  background-color: var(--secondary-color);
+  background-color: #1A237E;
   color:white;
 }
 main {
-  width: 968px;
+  max-width: 968px;
   margin: 0 auto;
+  padding: 10px;
+}
+section ul {
+  padding: inherit;
+  list-style-type: none;
 }
 section ul li {
   margin: 10px 0 0 10px;
-  list-style-type: none;
 }
 footer {
   text-align: center;
   color: white !important;
-  background-color: var(--primary-color);
+  background-color: #3D5AFE;
   padding: 20px;
   margin-top: 50px;
   vertical-align: middle;
+  font-weight: 300;
 }
 footer a {
   color: white;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table tbody td, th {
+  padding: 10px;
+  vertical-align: middle;
+}
+
+table tbody tr:hover {
+  background-color: #ddd;
+}
+
+/* Seletores Gerais */
+
+.text.left {
+  text-align: left;
+}
+.text.right {
+  text-align: right;
+  width: 5%;
+}
+a {
+  text-decoration: none;
+  color: #3D5AFE;
+  padding: 5px;
+}
+a:hover {
+  color: #1A237E;
 }
