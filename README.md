@@ -18,3 +18,4 @@
 - 09 - Formulários HTML5	| `Trabalhe Conosco` | [Código](/atividades/aula-09) | [Página](http://chicobentojr.github.io/web-design/atividades/aula-09)
 - 10 - CSS | `Web Design` | [Código](/atividades/aula-10) | [Página](http://chicobentojr.github.io/web-design/atividades/aula-10)
 - 11 - Tarefa | `Ecologia` | [Código](/atividades/aula-11) | [Página](http://chicobentojr.github.io/web-design/atividades/aula-11)
+- 12 - Avaliação 01 | `Avaliação` | [Código](/atividades/aula-12) | [Página](http://chicobentojr.github.io/web-design/atividades/aula-12)
