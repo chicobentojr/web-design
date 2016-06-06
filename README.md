@@ -17,4 +17,4 @@
 - 08 - Formulários	| `Pesquisa Eleitoral` | [Código](/atividades/aula-08) | [Página](http://chico.postero.com.br/web-design/atividades/aula-08)
 - 09 - Formulários HTML5	| `Trabalhe Conosco` | [Código](/atividades/aula-09) | [Página](http://chico.postero.com.br/web-design/atividades/aula-09)
 - 10 - CSS | `Web Design` | [Código](/atividades/aula-10) | [Página](http://chico.postero.com.br/web-design/atividades/aula-10)
-- 11 - Tarefa | `Ecologia` | [Código](/atividades/aula-11) | [Página](http://chico.postero.com.br/web-design/atividades/aula-11)
+- 11 - CSS Seletores | `Ecologia` | [Código](/atividades/aula-11) | [Página](http://chico.postero.com.br/web-design/atividades/aula-11)
