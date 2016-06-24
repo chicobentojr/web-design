@@ -19,3 +19,4 @@
 - 10 - CSS | `Web Design` | [Código](/atividades/aula-10) | [Página](http://chicobentojr.github.io/web-design/atividades/aula-10)
 - 11 - Tarefa | `Ecologia` | [Código](/atividades/aula-11) | [Página](http://chicobentojr.github.io/web-design/atividades/aula-11)
 - Avaliação 01 | `Vendas` | [Código](/avaliacoes/avaliacao-01) | [Página](http://chicobentojr.github.io/web-design/avaliacoes/avaliacao-01)
+- 12 - Layouts Modernos | `Político` | [Código](/atividades/aula-12) | [Página](http://chicobentojr.github.io/web-design/atividades/aula-12)

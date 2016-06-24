@@ -1,16 +1,12 @@
-### Avaliação 01
+### Faça um pequeno site para um Político. Esta página deverá conter:
 
-1. Faça um pequeno site de vendas online. A página principal (index.html) deve conter as principais ofertas do site, bem como as categorias de produtos que possui.
+- **Pelo menos** 3 arquivos HTML e **apenas** um arquivo CSS
 
-2. As categorias devem conter os produtos a serem vendidos.
+- O site deverá ser montado usando DIV's
 
-3. Insira imagens e links.
+- O site deve contar o nome do político, partido, informações, fotos e notícias
 
-4. Crie pelo menos 04 (quatro) páginas (incluindo a principal) utilizando o mesmo tema usado (CSS).
-
-5. Use todos os tipos de seletores CSS necessários.
-
-6. Use toda sua criatividade.
+- Tente deixar o **visual agradável**, com concordância entre cores, fontes e elementos da página
 
 #### Atividade em Dupla
 
