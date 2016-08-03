@@ -207,7 +207,7 @@
 
         if (delta < 0) {
           alert("A equação não possui raízes");
-        } else if (delta >= 0) {
+        } else if (delta > 0) {
           x1 = ((-1 * b) - (Math.sqrt(delta))) / (2 * a);
           x2 = ((-1 * b) + (Math.sqrt(delta))) / (2 * a);
           alert("As raizes da equação é: " + x1 + " e " + x2);
@@ -240,21 +240,259 @@
       }
     },
     function questao_19() {
-      valor = parseInt(prompt("Digite um número:"));
+      num = parseInt(prompt("Digite um número:"));
+      if (num > 0 && num < 1000) {
+        cen = parseInt(num / 100);
+        dez = parseInt((num - cen * 100) / 10);
+        uni = parseInt(num - cen * 100 - dez * 10);
 
-      centena = valor = 0 ? "" : valor > 1
+        quantidade = 0;
+        quantidade += cen ? 1 : 0;
+        quantidade += dez ? 1 : 0;
+        quantidade += uni ? 1 : 0;
+
+        espacos = cen && dez && uni ? [" , ", " e "] :
+                  (cen && dez) || (cen && uni) ? [" e ", ""] :
+                  (dez && uni) ? ["", " e "] :
+                  ["", ""];
+
+
+        // espacos = quantidade == 3 ? [" , ", " e "] : quantidade == 2 ? [" e ", ""] : ["",""];
+
+        msg = cen > 0 ? cen + " centena" : "";
+        msg += cen > 1 ? "s" : "";
+
+        msg += espacos[0];
+
+        msg += dez > 0 ? dez + " dezena" : "";
+        msg += dez > 1 ? "s" : "";
+
+        msg += espacos[1];
+
+        msg += uni > 0 ? uni + " unidade" : "";
+        msg += uni > 1 ? "s" : "";
+
+        alert(msg);
+
+      } else {
+        alert("Número inválido");
+      }
     },
-    function questao_20() {},
-    function questao_21() {},
-    function questao_22() {},
-    function questao_23() {},
-    function questao_24() {},
-    function questao_25() {},
-    function questao_26() {},
-    function questao_27() {},
-    function questao_28() {},
-  ];
+    function questao_20() {
+      n1 = parseFloat(prompt("Digite a primeira nota"));
+      n2 = parseFloat(prompt("Digite a segunda nota"));
+      n3 = parseFloat(prompt("Digite a terceira nota"));
+      media = (n1 + n2 + n3) / 3;
+      if (media == 10.0) {
+        alert("Aprovado com Distinção");
+      } else if (media >= 7) {
+        alert("Aprovado");
+      } else {
+        alert("Reprovado");
+      }
+    },
+    function questao_21() {
+      valor = parseInt(prompt("Digite o valor para saque:"));
+      if (valor >=10 && valor <= 600){
+        notas = [100,50,10,5,1];
+        selecionadas = [];
+        notas.forEach(function (nota){
+          quantidade = 0;
+          if (valor >= nota) {
+            quantidade = parseInt(valor / nota);
+            valor -= quantidade * nota;
+          }
+          selecionadas.push(quantidade);
+        });
 
+        mensagem = "As notas são:... \n";
+
+        selecionadas.forEach(function(selecionada, index){
+          if (selecionada > 0) {
+            mensagem += selecionada + " nota(s) de R$ " + notas[index] + ",00 \n";
+          }
+        });
+        alert(mensagem);
+      } else {
+        alert("Valor indisponível!");
+      }
+    },
+    function questao_22() {
+      n1 = parseInt(prompt("Digite um número:"));
+      if (n1 % 2 == 0) {
+        alert("O número é par");
+      } else {
+        alert("O número é impar");
+      }
+    },
+    function questao_23() {
+      n1 = parseFloat(prompt("Digite um número:"));
+      if (n1 == Math.round(n1)) {
+        alert("O número é inteiro");
+      } else {
+        alert("O número é decimal");
+      }
+    },
+    function questao_24() {
+      n1 = parseFloat(prompt("Digite o primeiro número:"));
+      n2 = parseFloat(prompt("Digite o segundo número:"));
+      operacoes = [
+        n1 + n2,
+        n1 - n2,
+        n1 * n2,
+        n1 / n2,
+      ]
+      op = parseInt(prompt(
+        "Selecione a operação \n" +
+        "1 - Soma \n" +
+        "2 - Subtração \n" +
+        "3 - Multiplicação \n" +
+        "4 - Divisão"));
+
+      if (op >= 1 && op <= 4){
+        index = op - 1;
+        res = operacoes[index];
+        par = res % 2 == 0 ? "Par" : "Impar";
+        positivo = res > 0 ? "Positivo" : "Negativo";
+        inteiro = res == Math.round(res) ? "Inteiro" : "Decimal";
+
+        alert("O seu resultado é: " + res + "\n" +
+              "Ele é: " + [par, positivo, inteiro].toString());
+
+      } else {
+        alert("Código da operação inválida!");
+      }
+
+    },
+    function questao_25() {
+      perguntas = [
+        "Telefonou para a vitima?",
+        "Esteve no local do crime?",
+        "Mora perto da vítima?",
+        "Devia para a vítima?",
+        "Já trabalhou com a vítima?",
+      ];
+
+      respostas = [];
+      for (i = 0; i < perguntas.length; i++){
+        op = parseInt(prompt(
+          perguntas[i] + "\n\n" +
+          "Digite: \n" +
+          "1 - Sim \n" +
+          "2 - Não \n"));
+        respostas[i] = op == 1;
+      }
+      verdades = 0;
+      respostas.forEach(function(resposta){
+        if (resposta) {
+          verdades += 1;
+        }
+      });
+
+      classificacao = "Inocente";
+
+      switch (verdades) {
+        case 2:
+          classificacao = "Suspeita";
+          break;
+        case 3:
+        case 4:
+          classificacao = "Cúmplice";
+          break;
+        case 5:
+          classificacao = "Assassino";
+      }
+
+      alert("Sua classificação é: " + classificacao);
+
+    },
+    function questao_26() {
+      litros = parseFloat(prompt("Digite a quantidade de litros vendidos:"));
+      combustivel = prompt("Digite o tipo de combustivel obtido:");
+
+      tabela = {
+        "A": {
+          preco: 1.90,
+          desconto: [0.03, 0.05]
+        },
+        "G": {
+          preco: 2.50,
+          desconto: [0.04, 0.06]
+        }
+      };
+
+      combustivel = combustivel.toUpperCase();
+
+      if (combustivel == "A" || combustivel == "G"){
+
+        preco = litros * tabela[combustivel].preco;
+        desconto_tipo = litros <= 20 ? 0 : 1;
+        preco -= tabela[combustivel].desconto[desconto_tipo] * preco;
+
+        alert(litros + " litros de "+(combustivel == "G" ? "Gasolina" : "Álcool") + " vai custar R$: " + preco);
+
+      } else {
+        alert("Combustível inválido!");
+      }
+    },
+    function questao_27() {
+      morango = parseFloat(prompt("Digite quantos quilos você comprou de Morango:"));
+      maca = parseFloat(prompt("Digite quantos quilos você comprou de Maça:"));
+
+      tabela = {
+        "morango": {
+          preco: [2.50, 2.20],
+          tipo: morango > 5 ? 1 : 0,
+        },
+        "maca": {
+          preco: [1.80, 1.50],
+          tipo: maca > 5 ? 1 : 0,
+        }
+      };
+      peso = morango + maca;
+
+      preco = (tabela.morango.preco[tabela.morango.tipo] * morango) + (tabela.maca.preco[tabela.maca.tipo] * maca);
+
+      if (peso > 8 || preco > 25){
+        preco -= preco * 0.10;
+      }
+
+      alert(morango + " Kg de Morango mais " + maca + " Kg de Maçã vão custar R$" + preco);
+    },
+    function questao_28() {
+      tipo = parseInt(prompt(
+          "Digite o tipo da carne que você quer comprar:\n\n" +
+          "1 - Filé Duplo \n" +
+          "2 - Alcatra \n" +
+          "3 - Picanha \n"));
+
+      quantidade = parseInt(prompt("Quantos quilos você quer?"));
+      cartao = parseInt(prompt(
+          "Você vai usar o Cartão Tabajara:\n\n" +
+          "1 - Sim \n" +
+          "2 - Não \n"));
+
+      tabela = {
+        1: { preco: [4.90, 5.80], },
+        2: { preco: [5.90, 6.80], },
+        3: { preco: [6.90, 7.80], },
+      };
+
+      carne = ["Filé Duplo", "Alcatra", "Picanha"][tipo -1];
+      valor = quantidade > 5 ? tabela[tipo].preco[1] : tabela[tipo].preco[0];
+      total = quantidade * valor;
+      desconto = cartao == 1 ? 0.05 * total : 0;
+      pagar = total - desconto;
+
+      alert("    >> Cupom Fiscal <<" +
+        "\n" + "Tipo de Carne:    " + carne +
+        "\n" + "Quantidade (Kg):    " + quantidade +
+        "\n" + "Preço Total:    R$ " + total +
+        "\n" + "Tipo do Pagamento:     " + (cartao == 1 ? "Cartão" : "Dinheiro") +
+        "\n" + "Valor do Desconto:    R$ " + desconto +
+        "\n" + "Valor a Pagar:    R$ " + pagar);
+      },
+    ];
   while (true) {
     var opcao = parseInt(window.prompt("Digite o número da questão que você quer executar:"));
     questoes[opcao - 1]();
